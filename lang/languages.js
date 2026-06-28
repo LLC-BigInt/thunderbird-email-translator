@@ -1,0 +1,53 @@
+// Canonical language list — single source of truth for the picker and the
+// language-code helpers. `iso1` is the 2-letter code used by the Bergamot model
+// registry; `iso3` is the ISO 639-3 code emitted/accepted by franc (note the
+// franc-specific choices: Chinese = "cmn", Persian = "pes").
+//
+// These mirror the pairs available from the Bergamot model registry (most go
+// to/from English; indirect pairs pivot through English).
+export const LANGUAGES = [
+  { iso1: "ar", iso3: "arb", name: "Arabic" },
+  { iso1: "bg", iso3: "bul", name: "Bulgarian" },
+  { iso1: "bn", iso3: "ben", name: "Bengali" },
+  { iso1: "ca", iso3: "cat", name: "Catalan" },
+  { iso1: "cs", iso3: "ces", name: "Czech" },
+  { iso1: "da", iso3: "dan", name: "Danish" },
+  { iso1: "de", iso3: "deu", name: "German" },
+  { iso1: "el", iso3: "ell", name: "Greek" },
+  { iso1: "en", iso3: "eng", name: "English" },
+  { iso1: "es", iso3: "spa", name: "Spanish" },
+  { iso1: "et", iso3: "est", name: "Estonian" },
+  { iso1: "fa", iso3: "pes", name: "Persian" },
+  { iso1: "fi", iso3: "fin", name: "Finnish" },
+  { iso1: "fr", iso3: "fra", name: "French" },
+  { iso1: "he", iso3: "heb", name: "Hebrew" },
+  { iso1: "hi", iso3: "hin", name: "Hindi" },
+  { iso1: "hr", iso3: "hrv", name: "Croatian" },
+  { iso1: "hu", iso3: "hun", name: "Hungarian" },
+  { iso1: "id", iso3: "ind", name: "Indonesian" },
+  { iso1: "is", iso3: "isl", name: "Icelandic" },
+  { iso1: "it", iso3: "ita", name: "Italian" },
+  { iso1: "ja", iso3: "jpn", name: "Japanese" },
+  { iso1: "ko", iso3: "kor", name: "Korean" },
+  { iso1: "lt", iso3: "lit", name: "Lithuanian" },
+  { iso1: "lv", iso3: "lav", name: "Latvian" },
+  { iso1: "nb", iso3: "nob", name: "Norwegian Bokmål" },
+  { iso1: "nl", iso3: "nld", name: "Dutch" },
+  { iso1: "nn", iso3: "nno", name: "Norwegian Nynorsk" },
+  { iso1: "pl", iso3: "pol", name: "Polish" },
+  { iso1: "pt", iso3: "por", name: "Portuguese" },
+  { iso1: "ro", iso3: "ron", name: "Romanian" },
+  { iso1: "ru", iso3: "rus", name: "Russian" },
+  { iso1: "sk", iso3: "slk", name: "Slovak" },
+  { iso1: "sl", iso3: "slv", name: "Slovenian" },
+  { iso1: "sq", iso3: "sqi", name: "Albanian" },
+  { iso1: "sr", iso3: "srp", name: "Serbian" },
+  { iso1: "sv", iso3: "swe", name: "Swedish" },
+  { iso1: "ta", iso3: "tam", name: "Tamil" },
+  { iso1: "th", iso3: "tha", name: "Thai" },
+  { iso1: "tr", iso3: "tur", name: "Turkish" },
+  { iso1: "uk", iso3: "ukr", name: "Ukrainian" },
+  { iso1: "ur", iso3: "urd", name: "Urdu" },
+  { iso1: "vi", iso3: "vie", name: "Vietnamese" },
+  { iso1: "zh", iso3: "cmn", name: "Chinese" },
+];

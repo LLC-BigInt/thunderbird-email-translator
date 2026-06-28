@@ -1,0 +1,35 @@
+{
+  "name": "mail-translator",
+  "version": "2.1.2",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/LLC-BigInt/thunderbird-email-translator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LLC-BigInt/thunderbird-email-translator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LLC-BigInt/thunderbird-email-translator/issues"
+  },
+  "description": "Tooling for the Email Translator Thunderbird add-on (tests + build of bundled deps).",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "bundle:franc": "esbuild lang/franc-entry.js --bundle --format=esm --outfile=lang/vendor/franc.bundle.js",
+    "bundle:content": "esbuild content/content-entry.js --bundle --format=iife --outfile=content/content.bundle.js",
+    "bundle:compose": "esbuild compose/compose-entry.js --bundle --format=iife --outfile=compose/compose.bundle.js",
+    "bundle": "npm run bundle:franc && npm run bundle:content && npm run bundle:compose",
+    "lint:ext": "web-ext lint --self-hosted",
+    "build:ext": "npm run bundle && web-ext build --overwrite-dest --filename email-translator-{version}.xpi"
+  },
+  "dependencies": {
+    "franc": "6.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.0",
+    "fake-indexeddb": "^6.0.0",
+    "jsdom": "^24.0.0",
+    "pdfjs-dist": "^5.6.205",
+    "web-ext": "^8.0.0"
+  }
+}

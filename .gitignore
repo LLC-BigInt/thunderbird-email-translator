@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output — ignore the folder but keep the packaged .xpi
+web-ext-artifacts/*
+!web-ext-artifacts/*.xpi
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Local / private
+.claude/
+CLAUDE.md
+PROJECT_NOTES.md
+*.log

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="mt-options">
+      <h1>Mail Translator</h1>
+
+      <section>
+        <h2>Default target language</h2>
+        <select id="mt-default-target"></select>
+      </section>
+
+      <section>
+        <h2>Translation</h2>
+        <label class="mt-check">
+          <input type="checkbox" id="mt-skip-quotes" />
+          Don't translate quotes &amp; signatures
+        </label>
+      </section>
+
+      <section>
+        <h2>Incoming mail in another language</h2>
+        <label class="mt-field">
+          When a message is in a language you don't read
+          <select id="mt-auto-mode">
+            <option value="ask">Ask me (show a Translate bar)</option>
+            <option value="auto">Translate it automatically</option>
+            <option value="off">Do nothing</option>
+          </select>
+        </label>
+        <label class="mt-field">
+          Languages you understand (no bar for these)
+          <select id="mt-known-langs" multiple size="8"></select>
+        </label>
+        <p class="mt-muted">Hold Ctrl/Cmd to select several.</p>
+      </section>
+
+      <section>
+        <h2>Downloaded language models</h2>
+        <p class="mt-muted">
+          Models are stored on this device and translation runs fully offline —
+          nothing is ever sent to a server.
+        </p>
+        <ul id="mt-models-list" class="mt-models"></ul>
+        <p class="mt-muted" id="mt-models-total"></p>
+        <button id="mt-clear-models" type="button">Delete all models</button>
+      </section>
+
+      <section>
+        <h2>Support this add-on</h2>
+        <p class="mt-muted">
+          Mail Translator is free and translates entirely on your device — your
+          email never leaves your computer. If it helps you, please consider a
+          donation.
+        </p>
+        <a id="mt-donate" href="#" target="_blank" rel="noopener">Donate ♥</a>
+      </section>
+    </main>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

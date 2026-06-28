@@ -1,0 +1,31 @@
+:root {
+  color-scheme: light dark;
+}
+
+.mt-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  min-width: 220px;
+  font: 14px/1.4 sans-serif;
+}
+
+label {
+  font-weight: 600;
+}
+
+select,
+button {
+  font: inherit;
+  padding: 6px 8px;
+}
+
+#mt-translate-all {
+  background: #1b6b3a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}

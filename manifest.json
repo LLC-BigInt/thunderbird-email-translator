@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Email Translator — Translate Offline, Private",
+  "version": "2.1.2",
+  "description": "On-device email translation for Thunderbird. Translate messages, replies and PDF attachments offline — private, no cloud, free. Supports many languages.",
+  "author": "BigInt",
+  "homepage_url": "https://github.com/LLC-BigInt/thunderbird-email-translator",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "office@bigint.pro",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "menus",
+    "storage",
+    "tabs",
+    "messagesModify",
+    "messagesRead",
+    "compose",
+    "notifications",
+    "https://bergamot.s3.amazonaws.com/*"
+  ],
+  "content_security_policy": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+  "background": {
+    "page": "background.html"
+  },
+  "message_display_action": {
+    "default_title": "Translate…",
+    "default_popup": "popup/picker.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "compose_action": {
+    "default_title": "Translate message…",
+    "default_popup": "compose/picker.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
